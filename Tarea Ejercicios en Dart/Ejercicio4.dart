@@ -6,6 +6,7 @@ c. Buscar libros por autor.
 d. Listar todos los libros ordenados por año de publicación. */
 import 'Biblioteca.dart';
 import 'Libro.dart';
+
 void main(){
   //Crear Libros
   final libro1=Libro(titulo: 'El Codigo da Vinci', autor: 'Dawn Brown', aniopublicacion: 2003);
@@ -23,21 +24,23 @@ void main(){
   
   final biblioteca= Biblioteca(listalibros: lista);
   //a)Agregar libros 
-  biblioteca.Agregar(libro5);
+  biblioteca.agregar(libro5);
   print('************************************');
+  
   //b)Eliminar Libros
-  biblioteca.Eliminar(libro1);
+  biblioteca.eliminar(libro1);
   print('************************************');
+  
+  
   //C)Buscar libros por su autor
-  final libropedido=biblioteca.Buscar('Gabriel Garcia Marquez');
+  final libropedido=biblioteca.buscar('Gabriel Garcia Marquez');
   print('Se encontro ${libropedido.titulo} del autor Gabriel Garcia Marquez');
   print('************************************');
-  //Imprimir los libros que se encuentran en al biblioteca
-  for(int i=0; i<biblioteca.listalibros.length;i++){
-    print(biblioteca.listalibros[i].titulo);
-    }
-  
-  
+
+  //d)Listar todos los libros ordenados por año de publicacion
+   biblioteca.ordenarlibrosanio(lista);
+
+
 
 
   
