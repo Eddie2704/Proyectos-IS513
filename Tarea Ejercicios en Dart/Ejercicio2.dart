@@ -3,6 +3,7 @@
 List<int> lista_unica<int> (final List<int> lista) {
   final List<int> lista_duplicada = []; // lista para ingresar cada elemento unico de la lista original
   for (int elemento in lista) { 
+    if (!lista_duplicada.contains(elemento)) {// si lista duplicada no contiene al elemento de la lista original
         lista_duplicada.add(elemento); // se agrega ese elemento a la nueva lista
     }
   }
